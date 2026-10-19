@@ -25,7 +25,7 @@ Fill in the real contact details:
 
 - In `index.html`, the `WHATSAPP` and `EMAIL` constants at the top of the script.
 - The `[add ...]` placeholders in the Contact section.
-- The `og:image` and `og:url` tags marked `DEPLOY STEP` in the head, with the live absolute URL.
+
 
 ## Run it locally
 
@@ -34,3 +34,7 @@ npx http-server -p 8080 .
 ```
 
 Then open http://localhost:8080. Opening `index.html` directly shows the still hero, because browsers block the video fetch on `file://`.
+
+## Deploys
+
+Hostinger (hPanel, Advanced > GIT) deploys the `main` branch of this repo to `public_html` of bluebellconstructionltd.com on every push.
