@@ -19,14 +19,6 @@ Plain HTML, CSS and vanilla JavaScript. One `index.html` plus `assets/`. No fram
 
 Scrolling through the hero scrubs the video. The logo is mapped onto the shed door with a `matrix3d` transform built from the door's four measured corners, so it keeps the door's perspective at any screen size. Phones and visitors with reduced motion get a still sunrise image instead of the video.
 
-## Before going live
-
-Fill in the real contact details:
-
-- In `index.html`, the `WHATSAPP` and `EMAIL` constants at the top of the script.
-- The `[add ...]` placeholders in the Contact section.
-
-
 ## Run it locally
 
 ```

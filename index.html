@@ -15,6 +15,9 @@
 <meta property="og:description" content="Civil, steel and design work across Bangladesh.">
 <meta property="og:image" content="https://bluebellconstructionltd.com/assets/hero-poster-lit.jpg">
 <meta property="og:url" content="https://bluebellconstructionltd.com/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"GeneralContractor","name":"Bluebell Construction Ltd.","url":"https://bluebellconstructionltd.com/","logo":"https://bluebellconstructionltd.com/assets/logo/icon-512.png","image":"https://bluebellconstructionltd.com/assets/hero-poster-lit.jpg","description":"Civil, steel and design work across Bangladesh.","telephone":"+8801711273762","email":"info@bluebellconstructionltd.com","address":{"@type":"PostalAddress","streetAddress":"157/1/Ka, Distillery Road, Gendaria, Katherpul","addressLocality":"Dhaka","postalCode":"1204","addressCountry":"BD"},"areaServed":"Bangladesh"}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
@@ -341,7 +344,10 @@ details[open] .ans{animation:riseIn .5s var(--ease)}
 .cinfo .mono{color:var(--steel-dim)}
 .cinfo a,.cinfo span{color:var(--mist);text-decoration:none}
 .cinfo a:hover{color:var(--accent)}
-.todo{color:var(--steel-dim)!important;font-style:italic}
+.cinfo .also{color:var(--steel-dim);font-size:.82em}
+.cinfo a,.cinfo span,.fcontact a{overflow-wrap:anywhere;min-width:0}
+.fcontact{width:100%;display:flex;flex-wrap:wrap;gap:8px 28px;margin:0}
+.fcontact span{color:var(--steel-dim)}
 form{background:rgba(22,48,74,.72);border:1px solid var(--line);border-radius:12px;padding:clamp(24px,3vw,40px);backdrop-filter:blur(10px)}
 .f{display:grid;gap:8px;margin-bottom:18px}
 .f2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -671,10 +677,10 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
         <h2 class="rv" style="--i:1">Tell us about your project.</h2>
         <p class="rv" style="--i:2">Send a few details and we will call you back to plan a site visit.</p>
         <ul class="cinfo rv" style="--i:3">
-          <li><span class="mono">Phone</span><span class="todo">[add phone]</span></li>
-          <li><span class="mono">WhatsApp</span><span class="todo">[add WhatsApp]</span></li>
-          <li><span class="mono">Email</span><span class="todo">[add email]</span></li>
-          <li><span class="mono">Office</span><span class="todo">[add address]</span></li>
+          <li><span class="mono">Phone</span><a href="tel:+8801711273762">+880 1711-273762</a></li>
+          <li><span class="mono">WhatsApp</span><a href="https://wa.me/8801711273762" target="_blank" rel="noopener">+880 1711-273762 <small class="also">(WhatsApp and WeChat)</small></a></li>
+          <li><span class="mono">Email</span><a href="mailto:info@bluebellconstructionltd.com">info@bluebellconstructionltd.com</a></li>
+          <li><span class="mono">Office</span><span>157/1/Ka, Distillery Road, Gendaria, Katherpul, Dhaka-1204</span></li>
         </ul>
       </div>
       <form id="quote" class="rv" data-rv="right" novalidate>
@@ -703,6 +709,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
   <div class="wrap">
     <img src="assets/logo/logo-white.webp" alt="Bluebell Construction" width="900" height="230" loading="lazy">
     <ul><li><a href="#services">Services</a></li><li><a href="#work">Work</a></li><li><a href="#process">Process</a></li><li><a href="#faq">Questions</a></li><li><a href="#contact">Contact</a></li></ul>
+    <p class="fcontact"><a href="tel:+8801711273762">+880 1711-273762</a><a href="mailto:info@bluebellconstructionltd.com">info@bluebellconstructionltd.com</a><span>157/1/Ka, Distillery Road, Gendaria, Katherpul, Dhaka-1204</span></p>
     <p class="legal">&copy; 2026 Bluebell Construction Ltd. All rights reserved.</p>
   </div>
 </footer>
@@ -710,8 +717,8 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
 <script>
 (() => {
   // ---------- contact details: fill these in before going live ----------
-  const WHATSAPP = '';   // digits only with country code, e.g. 8801XXXXXXXXX
-  const EMAIL = '';      // e.g. info@bluebellconstructionltd.com
+  const WHATSAPP = '8801711273762';   // digits only with country code
+  const EMAIL = 'info@bluebellconstructionltd.com';
 
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
