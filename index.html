@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bluebell Construction Ltd. | Civil, steel and design work in Bangladesh</title>
-<meta name="description" content="Bluebell Construction Ltd. builds buildings, steel structures, roads and interiors across Bangladesh. Drawings, cost list and approvals first, then we build it right and on time.">
+<title>Bluebell Construction | Civil, steel and design work in Bangladesh</title>
+<meta name="description" content="Bluebell Construction builds steel structures, RCC buildings, roads, drains and finishing work across Bangladesh. Drawings, cost list and approvals first, then we build it right and on time.">
 <meta name="theme-color" content="#0F2438">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
 <link rel="canonical" href="https://bluebellconstructionltd.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Bluebell Construction Ltd. | We build what lasts.">
+<meta property="og:title" content="Bluebell Construction | We build what lasts.">
 <meta property="og:description" content="Civil, steel and design work across Bangladesh.">
 <meta property="og:image" content="https://bluebellconstructionltd.com/assets/hero-poster-lit.jpg">
 <meta property="og:url" content="https://bluebellconstructionltd.com/">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"GeneralContractor","name":"Bluebell Construction Ltd.","url":"https://bluebellconstructionltd.com/","logo":"https://bluebellconstructionltd.com/assets/logo/icon-512.png","image":"https://bluebellconstructionltd.com/assets/hero-poster-lit.jpg","description":"Civil, steel and design work across Bangladesh.","telephone":"+8801711273762","email":"info@bluebellconstructionltd.com","address":{"@type":"PostalAddress","streetAddress":"157/1/Ka, Distillery Road, Gendaria, Katherpul","addressLocality":"Dhaka","postalCode":"1204","addressCountry":"BD"},"areaServed":"Bangladesh"}
+{"@context":"https://schema.org","@type":"GeneralContractor","name":"Bluebell Construction","url":"https://bluebellconstructionltd.com/","logo":"https://bluebellconstructionltd.com/assets/logo/icon-512.png","image":"https://bluebellconstructionltd.com/assets/hero-poster-lit.jpg","description":"Civil, steel and design work across Bangladesh.","telephone":"+8801711273762","email":"info@bluebellconstructionltd.com","address":{"@type":"PostalAddress","streetAddress":"157/1/Ka, Distillery Road, Gendaria, Katherpul","addressLocality":"Dhaka","postalCode":"1204","addressCountry":"BD"},"areaServed":"Bangladesh"}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -205,16 +205,19 @@ main section:not(.hero){position:relative;padding:clamp(88px,12vw,160px) var(--g
 .services{background:linear-gradient(var(--canvas-deep),var(--canvas) 30%)}
 .services .head{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:end;margin-bottom:64px}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.svc{position:relative;background:var(--canvas);padding:36px 32px 40px;min-height:270px;transition:background-color .5s var(--ease)}
+.svc{position:relative;background:var(--canvas);display:flex;flex-direction:column;transition:background-color .5s var(--ease)}
+.svc .ph{position:relative;aspect-ratio:16/10;overflow:hidden;isolation:isolate}
+.svc .ph .pz{position:absolute;left:0;right:0;top:-8%;bottom:-8%;transform:translate3d(0,calc(var(--py,0) * -6%),0)}
+.svc .ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) contrast(1.06) brightness(.9);transform:scale(1.18);transition:transform 1.6s var(--ease),filter .6s var(--ease)}
+.svc-grid.in .svc .ph img{transform:scale(1.02)}
+.svc-grid.in .svc:hover .ph img{transform:scale(1.08);filter:saturate(1) contrast(1.02) brightness(1)}
+.svc .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,66,189,.18),rgba(15,36,56,0) 45%,rgba(15,36,56,.75));pointer-events:none}
+.svc .ph .num{position:absolute;left:18px;bottom:14px;z-index:1;color:var(--mist);background:rgba(10,26,43,.6);border:1px solid var(--line-strong);border-radius:4px;padding:5px 8px;backdrop-filter:blur(6px)}
+.svc .body{padding:26px 28px 34px}
 .svc:hover{background:var(--panel)}
-.svc .num{color:var(--steel-dim)}
-.svc svg{width:56px;height:56px;margin:22px 0 26px;color:var(--signal-soft)}
-.svc svg *{fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s var(--ease);transition-delay:calc(var(--i,0) * 90ms + .3s)}
-.svc-grid.in svg *{stroke-dashoffset:0}
-.svc-grid.done svg *{transition-delay:0s}
 .svc h3{font-size:1.7rem;margin-bottom:12px;color:var(--mist)}
 .svc p{color:var(--steel);font-size:.98rem}
-.svc::after{content:"";position:absolute;left:32px;right:32px;bottom:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.svc::after{content:"";position:absolute;left:28px;right:28px;bottom:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
 .svc:hover::after{transform:scaleX(1)}
 .supply{margin-top:30px;display:flex;align-items:center;gap:14px;color:var(--steel)}
 .supply b{color:var(--mist);font-weight:500}
@@ -268,15 +271,25 @@ main section:not(.hero){position:relative;padding:clamp(88px,12vw,160px) var(--g
 .tile .ticks::before{left:0;top:0;border-width:2px 0 0 2px;transform:translate(6px,6px)}
 .tile .ticks::after{right:0;bottom:0;border-width:0 2px 2px 0;transform:translate(-6px,-6px)}
 .tile figcaption{position:absolute;left:18px;right:18px;bottom:14px;z-index:2;font-size:.9rem;line-height:1.35;color:var(--mist);text-shadow:0 1px 8px rgba(6,14,24,.7);transition:transform .6s var(--ease)}
-.tile figcaption .mono{display:block;color:var(--accent);margin-bottom:5px;font-size:.66rem}
+.tile figcaption .txt{display:block;font:700 1.15rem/1.1 var(--display);text-transform:uppercase;letter-spacing:.01em;margin-bottom:6px}
+.tile figcaption .mono{display:block;color:var(--accent);font-size:.64rem;line-height:1.5;letter-spacing:.1em}
+.clients{grid-column:var(--gc);grid-row:var(--gr);position:relative;border-radius:6px;background:linear-gradient(140deg,var(--brand),#00257D 60%,var(--canvas));padding:clamp(22px,3vw,40px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.clients::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+.clients .mono{position:relative;color:var(--accent)}
+.clients ul{position:relative;list-style:none;margin:16px 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
+.clients li{font:700 clamp(1.5rem,2.6vw,2.4rem)/1.1 var(--display);text-transform:uppercase;color:var(--mist)}
+.clients .note{position:relative;color:var(--steel);font-size:.92rem}
+.kinetic.photos{background:transparent;border:0;padding:0;margin:clamp(56px,7vw,96px) calc(-1 * var(--gutter)) 0}
+.kinetic .strip-label{color:var(--steel-dim);padding:0 var(--gutter);margin:0 0 18px}
+.kinetic .prow{gap:14px;font-size:0}
+.kinetic .prow img{height:clamp(150px,19vw,250px);width:auto;border-radius:6px;filter:saturate(.8) contrast(1.05) brightness(.92);transition:filter .5s var(--ease)}
+.kinetic .prow img:hover{filter:none}
 .tile button{position:absolute;inset:0;z-index:3;background:none;border:0;cursor:zoom-in}
 .tile:hover img{filter:saturate(1) contrast(1.02) brightness(1)}
 .gallery.in .tile:hover img{transform:scale(calc(1.1 * var(--z,1)))}
 .tile:hover::before{opacity:.55}
 .tile:hover .ticks::before,.tile:hover .ticks::after{opacity:1;transform:none}
 .tile:hover figcaption{transform:translateY(-4px)}
-.tile.sm figcaption .txt{display:none}
-.tile.sm:hover figcaption .txt{display:block}
 .lightbox{border:0;padding:0;background:transparent;max-width:min(1400px,94vw);max-height:92vh;color:var(--mist)}
 .lightbox::backdrop{background:rgba(6,14,24,.9);backdrop-filter:blur(6px)}
 .lightbox[open]{animation:riseIn .5s var(--ease)}
@@ -401,7 +414,7 @@ main section:not(.hero)>.wrap{position:relative;z-index:1}
 /* responsive */
 @media (max-width:1000px){
   .gallery{grid-template-columns:repeat(6,1fr);grid-auto-rows:84px;grid-auto-flow:dense}
-  .tile{grid-column:span var(--tc);grid-row:span var(--tr)}
+  .tile,.clients{grid-column:span var(--tc);grid-row:span var(--tr)}
   .why .badge{right:12px}
   .services .head,.process .grid,.why .split,.faq .wrap,.contact .wrap{grid-template-columns:1fr}
   .svc-grid{grid-template-columns:1fr 1fr}
@@ -410,13 +423,15 @@ main section:not(.hero)>.wrap{position:relative;z-index:1}
 }
 @media (max-width:640px){
   .svc-grid{grid-template-columns:1fr}
-  .svc{min-height:0}
+  .svc .body{padding:22px 20px 28px}
   .points{grid-template-columns:1fr}
   .f2{grid-template-columns:1fr}
   .cinfo li{grid-template-columns:90px 1fr}
   .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:120px;gap:10px}
-  .tile{grid-column:span var(--mc);grid-row:span var(--mr)}
-  .tile figcaption .txt,.tile .site{display:none}
+  .tile,.clients{grid-column:span var(--mc);grid-row:span var(--mr)}
+  .tile figcaption .mono{display:none}
+  .tile figcaption .txt{font-size:.95rem}
+  .tile figcaption{left:12px;right:12px;bottom:10px}
   .why .badge{right:10px;bottom:10px;padding:10px 12px;font-size:.95rem}
   .head .label .dim{display:none}
   .bgnum{font-size:8rem}
@@ -430,7 +445,8 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;transition-delay:0s!important;scroll-behavior:auto!important}
   .rv{opacity:1;transform:none}
-  .dim path,.svc svg *{stroke-dashoffset:0}
+  .dim path{stroke-dashoffset:0}
+  .svc .ph img{transform:none}
   .why .pic img,.tile img{transform:none}
   .rv[data-rv]{transform:none}
   .clip,.clip[data-clip]{clip-path:none}
@@ -449,7 +465,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
 <div class="beam" aria-hidden="true"><div class="track"></div><div class="fill"></div></div>
 
 <nav class="nav" aria-label="Main">
-  <a class="brand" href="#top" aria-label="Bluebell Construction Ltd., back to top"><img src="assets/logo/logo-white.webp" alt="Bluebell Construction" width="900" height="230"></a>
+  <a class="brand" href="#top" aria-label="Bluebell Construction, back to top"><img src="assets/logo/logo-white.webp" alt="Bluebell Construction" width="900" height="230"></a>
   <ul id="menu">
     <li><a href="#services">Services</a></li>
     <li><a href="#work">Work</a></li>
@@ -477,7 +493,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
       <div class="topfade" aria-hidden="true"></div>
 
       <div class="band b1" data-a="0" data-b="0.24">
-        <p class="kicker mono">Bluebell Construction Ltd.</p>
+        <p class="kicker mono">Bluebell Construction</p>
         <div class="stack">
           <h2 class="big soft" aria-hidden="true">Good buildings start before sunrise.</h2>
           <h2 class="big sharp">Good buildings start before sunrise.</h2>
@@ -500,7 +516,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
 
       <div class="static-copy">
         <div class="top">
-          <p class="kicker mono">Bluebell Construction Ltd.</p>
+          <p class="kicker mono">Bluebell Construction</p>
           <h1>We build what lasts.</h1>
           <p class="sub">Civil, steel and design work across Bangladesh.</p>
         </div>
@@ -527,40 +543,34 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
       </div>
       <div class="svc-grid rv-group">
         <article class="svc rv" style="--i:0">
-          <span class="num mono">01</span>
-          <svg viewBox="0 0 56 56" aria-hidden="true"><path pathLength="1" d="M10 50V14l18-8 18 8v36"/><path pathLength="1" d="M4 50h48"/><path pathLength="1" d="M18 20h6M32 20h6M18 30h6M32 30h6M18 40h6M32 40h6"/></svg>
-          <h3>Building and RCC construction</h3>
-          <p>Residential, commercial and industrial buildings, built to the drawing and checked at every stage.</p>
+          <div class="ph clip" data-clip="u"><div class="pz" data-par><img src="assets/img/project-13.jpg" alt="Steel roof frame going up over a brick building" loading="lazy" style="object-position:50% 45%"></div><span class="num mono">01</span></div>
+          <div class="body"><h3>Steel structure and fabrication</h3>
+          <p>Pre-engineered buildings, sheds and custom steel work, fabricated and installed by our own crew.</p></div>
         </article>
         <article class="svc rv" style="--i:1">
-          <span class="num mono">02</span>
-          <svg viewBox="0 0 56 56" aria-hidden="true"><path pathLength="1" d="M4 40L28 14l24 26z"/><path pathLength="1" d="M12 40l8-17M20 23l8 17M28 40l8-17M36 23l8 17"/><path pathLength="1" d="M8 40v10M48 40v10"/></svg>
-          <h3>Steel structure and fabrication</h3>
-          <p>Pre-engineered buildings, sheds and custom steel work, fabricated and installed by our own crew.</p>
+          <div class="ph clip" data-clip="u"><div class="pz" data-par><img src="assets/img/dormitory.jpg" alt="Dormitory building, Cox’s Bazar-Dohazari Rail Project" loading="lazy" style="object-position:50% 40%"></div><span class="num mono">02</span></div>
+          <div class="body"><h3>Building and RCC construction</h3>
+          <p>Residential, commercial and industrial buildings, built to the drawing and checked at every stage.</p></div>
         </article>
         <article class="svc rv" style="--i:2">
-          <span class="num mono">03</span>
-          <svg viewBox="0 0 56 56" aria-hidden="true"><path pathLength="1" d="M20 6L6 50M36 6l14 44"/><path pathLength="1" d="M28 8v6M28 22v8M28 38v10"/><path pathLength="1" d="M2 50h52"/></svg>
-          <h3>Roads, drainage and earthwork</h3>
-          <p>Road works, drains, boundary walls and site preparation.</p>
+          <div class="ph clip" data-clip="u"><div class="pz" data-par><img src="assets/img/road-ghior.jpg" alt="Road work in Ghior, Manikganj, for LGED" loading="lazy" style="object-position:50% 60%"></div><span class="num mono">03</span></div>
+          <div class="body"><h3>Roads, drains and boundary walls</h3>
+          <p>Road works, drains, boundary walls and site preparation for public and private clients.</p></div>
         </article>
         <article class="svc rv" style="--i:3">
-          <span class="num mono">04</span>
-          <svg viewBox="0 0 56 56" aria-hidden="true"><path pathLength="1" d="M6 50V10l40 40z"/><path pathLength="1" d="M14 42V30l12 12z"/><path pathLength="1" d="M42 6l8 8-20 20-10 2 2-10z"/></svg>
-          <h3>Architecture and structural design</h3>
-          <p>Drawings, structural design and approvals handled before the first brick.</p>
+          <div class="ph clip" data-clip="u"><div class="pz" data-par><img src="assets/img/shutter-2.jpg" alt="Steel shutter fabrication for Sinohydro" loading="lazy" style="object-position:50% 55%"></div><span class="num mono">04</span></div>
+          <div class="body"><h3>Steel shutter and formwork</h3>
+          <p>Steel shutters and formwork made in our own shop, for walls, columns and slabs.</p></div>
         </article>
         <article class="svc rv" style="--i:4">
-          <span class="num mono">05</span>
-          <svg viewBox="0 0 56 56" aria-hidden="true"><path pathLength="1" d="M8 8h34v12H8z"/><path pathLength="1" d="M42 14h6v12H25v8"/><path pathLength="1" d="M22 34h6v16h-6z"/></svg>
-          <h3>Interior and repair</h3>
-          <p>Interior fit-out, renovation, repair and maintenance for existing buildings.</p>
+          <div class="ph clip" data-clip="u"><div class="pz" data-par><img src="assets/img/project-32.jpg" alt="Finished terrace tile pattern" loading="lazy" style="object-position:50% 50%"></div><span class="num mono">05</span></div>
+          <div class="body"><h3>Finishing, tiles and woodwork</h3>
+          <p>Tiles, finishing and wooden work from our own factory, for new buildings and repairs.</p></div>
         </article>
         <article class="svc rv" style="--i:5">
-          <span class="num mono">06</span>
-          <svg viewBox="0 0 56 56" aria-hidden="true"><path pathLength="1" d="M12 10h32v42H12z"/><path pathLength="1" d="M21 6h14v8H21z"/><path pathLength="1" d="M19 30l6 6 12-12"/><path pathLength="1" d="M19 44h18"/></svg>
-          <h3>Consultancy and project management</h3>
-          <p>BOQ, supervision and QA/QC for owners who want a second pair of eyes.</p>
+          <div class="ph clip" data-clip="u"><div class="pz" data-par><img src="assets/img/project-27.jpg" alt="Foundation rebar and formwork checked before the pour" loading="lazy" style="object-position:50% 50%"></div><span class="num mono">06</span></div>
+          <div class="body"><h3>Design, BOQ and project management</h3>
+          <p>Drawings, structural design, clear cost lists and QA/QC supervision, before and during the build.</p></div>
         </article>
       </div>
       <p class="supply rv" data-rv="left">We also supply construction materials for our own projects and for yours.</p>
@@ -568,7 +578,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
   </section>
 
   <div class="kinetic" aria-hidden="true">
-    <div class="row r1" data-speed="-0.35"><span>Building</span><span>Steel structure</span><span>Roads</span><span>Design</span><span>Interior</span><span>Consultancy</span><span>Building</span><span>Steel structure</span><span>Roads</span><span>Design</span><span>Interior</span><span>Consultancy</span></div>
+    <div class="row r1" data-speed="-0.35"><span>Steel structure</span><span>Building</span><span>Roads</span><span>Formwork</span><span>Finishing</span><span>Woodwork</span><span>Steel structure</span><span>Building</span><span>Roads</span><span>Formwork</span><span>Finishing</span><span>Woodwork</span></div>
     <div class="row r2" data-speed="0.28"><span>Planned first</span><span>Built once</span><span>Built right</span><span>On time</span><span>Planned first</span><span>Built once</span><span>Built right</span><span>On time</span><span>Planned first</span><span>Built once</span><span>Built right</span><span>On time</span></div>
   </div>
 
@@ -616,9 +626,13 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
           <p class="label mono rv"><span>03 / Work</span><svg class="dim" viewBox="0 0 120 12" aria-hidden="true"><path pathLength="1" d="M1 1v10M1 6h118M119 1v10"/></svg></p>
           <h2 class="rv" style="--i:1">Real sites. Real work.</h2>
         </div>
-        <p class="rv" style="--i:2">Photos from our own crews on the job. Tap any photo to see it full size.</p>
+        <p class="rv" style="--i:2">Named projects, real clients, our own crews. Tap any photo to see it full size.</p>
       </div>
       <div class="gallery" id="gallery"></div>
+    </div>
+    <div class="kinetic photos" aria-label="More photos from our sites">
+      <p class="mono strip-label">More from our sites</p>
+      <div class="row prow" data-speed="-0.3" id="strip"></div>
     </div>
     <dialog class="lightbox" id="lightbox" aria-label="Project photo">
       <img id="lbImg" src="" alt="">
@@ -710,7 +724,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
     <img src="assets/logo/logo-white.webp" alt="Bluebell Construction" width="900" height="230" loading="lazy">
     <ul><li><a href="#services">Services</a></li><li><a href="#work">Work</a></li><li><a href="#process">Process</a></li><li><a href="#faq">Questions</a></li><li><a href="#contact">Contact</a></li></ul>
     <p class="fcontact"><a href="tel:+8801711273762">+880 1711-273762</a><a href="mailto:info@bluebellconstructionltd.com">info@bluebellconstructionltd.com</a><span>157/1/Ka, Distillery Road, Gendaria, Katherpul, Dhaka-1204</span></p>
-    <p class="legal">&copy; 2026 Bluebell Construction Ltd. All rights reserved.</p>
+    <p class="legal">&copy; 2026 Bluebell Construction All rights reserved.</p>
   </div>
 </footer>
 
@@ -980,34 +994,46 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
   document.addEventListener('visibilitychange', () => document.body.classList.toggle('paused', document.hidden));
 
   // ---------- gallery ----------
-  // a planned bento grid: [file, caption, desktop col/row, tablet span c/r, phone span c/r, focal point, reveal side]
+  // named projects in a planned bento grid: [file, title, client or place, desktop col, desktop row, tablet c, tablet r, phone c, phone r, focal point, reveal side]
+  const PRJ = 'Cox\u2019s Bazar-Dohazari Rail Project';
   const shots = [
-    ['13', 'Steel roof frame over a brick structure, aerial view', '1 / span 7', '1 / span 4', 6, 4, 2, 2, '50% 45%', 'l'],
-    ['10', 'Steel shed structure under construction', '8 / span 5', '1 / span 2', 3, 2, 1, 1, '40% 50%', 'r'],
-    ['11', 'Floor casting under a new steel shed', '8 / span 5', '3 / span 2', 3, 2, 1, 1, '92% 78%', 'r', 1.9],
-    ['09', 'Tower reinforcement and scaffolding', '1 / span 4', '5 / span 4', 3, 4, 1, 2, '50% 40%', 'u'],
-    ['42', 'Multi-sport court with night lighting', '5 / span 8', '5 / span 2', 3, 2, 1, 1, '50% 62%', 'r'],
-    ['23', 'Night concrete pour', '5 / span 4', '7 / span 2', 3, 2, 1, 1, '50% 55%', 'u'],
-    ['27', 'Foundation rebar and formwork', '9 / span 4', '7 / span 2', 3, 2, 2, 2, '50% 50%', 'u'],
-    ['33', 'Terrace tile pattern work', '1 / span 5', '9 / span 3', 3, 2, 1, 1, '50% 60%', 'l'],
-    ['19', 'Rebar mesh laying for a large slab', '6 / span 4', '9 / span 3', 3, 2, 1, 1, '50% 55%', 'u'],
-    ['32', 'Terrace tile pattern, finished', '10 / span 3', '9 / span 3', 6, 2, 2, 1, '50% 50%', 'r']
+    ['ramu-station', 'Finishing work, Ramu Railway Station', PRJ + ' / Client: CCECC-MAX JV', '1 / span 8', '1 / span 4', 6, 4, 2, 2, '50% 50%', 'l'],
+    ['water-tank', 'Water tank work', PRJ, '9 / span 4', '1 / span 4', 3, 4, 1, 2, '50% 40%', 'r'],
+    ['road-ghior', 'Road work, Ghior, Manikganj', 'Client: LGED', '1 / span 3', '5 / span 4', 3, 4, 1, 2, '50% 55%', 'u'],
+    ['dormitory', 'Finishing work, dormitory building', PRJ + ' / Client: CCECC-MAX JV', '4 / span 6', '5 / span 4', 6, 3, 2, 2, '50% 45%', 'u'],
+    ['tiles-ramu', 'Tiles work, Ramu Railway Station', PRJ, '10 / span 3', '5 / span 4', 3, 4, 1, 2, '50% 70%', 'u'],
+    ['shutter-1', 'Steel shutter work', 'Client: Sinohydro', '1 / span 3', '9 / span 4', 3, 4, 1, 2, '50% 50%', 'l'],
+    ['shutter-2', 'Steel shutter fabrication', 'Client: Sinohydro', '4 / span 3', '9 / span 4', 3, 4, 1, 2, '50% 55%', 'u'],
+    ['steel-fakir', 'Steel structure work', 'Client: Fakir Group', '7 / span 6', '9 / span 2', 6, 2, 2, 1, '50% 50%', 'r'],
+    ['school-mirpur', 'Sultan Molla School', 'Mirpur, Dhaka', '7 / span 6', '11 / span 2', 6, 2, 2, 1, '50% 62%', 'r'],
+    ['drain-wall', 'Drain and boundary wall work', 'Dormitory building, ' + PRJ, '1 / span 3', '13 / span 4', 3, 4, 1, 2, '50% 50%', 'l'],
+    ['wood-factory', 'Wooden work from our own factory', 'Visited by the Project Director and the CCECC PM', '4 / span 3', '13 / span 4', 3, 4, 2, 2, '50% 35%', 'u']
   ];
   const gal = $('#gallery');
-  shots.forEach(([n, cap, gc, gr, tc, tr, mc, mr, op, side, z = 1], i) => {
+  shots.forEach(([file, title, meta, gc, gr, tc, tr, mc, mr, op, side], i) => {
     const f = document.createElement('figure');
-    f.className = 'tile clip' + ((/span [1-4]$/.test(gc) && /span 2/.test(gr)) ? ' sm' : '');
+    f.className = 'tile clip';
     f.dataset.clip = side;
-    f.style.cssText = `--gc:${gc};--gr:${gr};--tc:${tc};--tr:${tr};--mc:${mc};--mr:${mr};--op:${op};--z:${z};--i:${i % 4}`;
-    f.innerHTML = `<div class="pz" data-par><img src="assets/img/project-${n}.jpg" alt="${cap}" loading="lazy"></div><span class="ticks" aria-hidden="true"></span><figcaption><span class="mono">P-${n}<span class="site"> / Bluebell site</span></span><span class="txt">${cap}</span></figcaption><button type="button" aria-label="Open photo: ${cap}"></button>`;
+    f.style.cssText = `--gc:${gc};--gr:${gr};--tc:${tc};--tr:${tr};--mc:${mc};--mr:${mr};--op:${op};--i:${i % 4}`;
+    f.innerHTML = `<div class="pz" data-par><img src="assets/img/${file}.jpg" alt="${title}" loading="lazy"></div><span class="ticks" aria-hidden="true"></span><figcaption><span class="txt">${title}</span><span class="mono">${meta}</span></figcaption><button type="button" aria-label="Open photo: ${title}"></button>`;
     f.querySelector('button').addEventListener('click', () => openLb(i));
     gal.appendChild(f);
   });
-  io.observe(gal);
+  // the client tile closes the grid
+  const ct = document.createElement('div');
+  ct.className = 'clients clip'; ct.dataset.clip = 'r';
+  ct.style.cssText = '--gc:7 / span 6;--gr:13 / span 4;--tc:6;--tr:3;--mc:2;--mr:3;--i:2';
+  ct.innerHTML = '<p class="mono">Clients we have worked for</p><ul><li>CCECC-MAX JV</li><li>Sinohydro</li><li>LGED</li><li>Fakir Group</li></ul><p class="note">Including the ' + PRJ + '.</p>';
+  gal.appendChild(ct);
+  // more photos from our sites, moving with the scroll
+  const strip = $('#strip');
+  const more = [['project-13', 'Steel roof frame over a brick building'], ['project-23', 'Night concrete pour'], ['project-42', 'Multi-sport court with night lighting'], ['project-19', 'Rebar mesh for a large slab'], ['project-11', 'Floor casting under a steel shed'], ['project-27', 'Foundation rebar and formwork'], ['project-33', 'Terrace tile pattern'], ['project-41', 'Engineers checking ground levels']];
+  strip.innerHTML = [...more, ...more].map(([f, alt], i) => `<img src="assets/img/${f}.jpg" alt="${i < more.length ? alt : ''}" loading="lazy"${i < more.length ? '' : ' aria-hidden="true"'}>`).join('');
+  io.observe(gal); io.observe(ct);
   watchPar();
   requestAnimationFrame(pageFrame);
   const lb = $('#lightbox'), lbImg = $('#lbImg'), lbCap = $('#lbCap'); let lbi = 0;
-  function showLb(i) { lbi = (i + shots.length) % shots.length; const [n, cap] = shots[lbi]; lbImg.src = `assets/img/project-${n}.jpg`; lbImg.alt = cap; lbCap.textContent = cap; }
+  function showLb(i) { lbi = (i + shots.length) % shots.length; const [file, title, meta] = shots[lbi]; lbImg.src = `assets/img/${file}.jpg`; lbImg.alt = title; lbCap.textContent = title + '. ' + meta; }
   function openLb(i) { showLb(i); lb.showModal(); }
   $('#lbPrev').addEventListener('click', () => showLb(lbi - 1));
   $('#lbNext').addEventListener('click', () => showLb(lbi + 1));
