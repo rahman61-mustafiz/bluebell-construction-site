@@ -239,17 +239,11 @@ main section:not(.hero){position:relative;padding:clamp(88px,12vw,160px) var(--g
 .steps li.lit .n{color:var(--brand)}
 .builder{position:relative;background:#fff;border:1px solid rgba(15,36,56,.12);border-radius:12px;padding:28px 28px 24px;box-shadow:0 30px 60px -30px rgba(15,36,56,.35)}
 .builder .meta{display:flex;justify-content:space-between;color:var(--ink-2);margin-bottom:10px}
-.builder svg{width:100%;height:auto;display:block}
-.builder .gridbg{stroke:rgba(0,66,189,.07);stroke-width:1}
-.builder .st path,.builder .st line,.builder .st polyline{fill:none;stroke:var(--brand);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1}
-.builder .s1 *{stroke-dashoffset:calc(1 - var(--s1,0))}
-.builder .s2 *{stroke-dashoffset:calc(1 - var(--s2,0))}
-.builder .s3 *{stroke-dashoffset:calc(1 - var(--s3,0))}
-.builder .s4 *{stroke-dashoffset:calc(1 - var(--s4,0));stroke:var(--accent)!important}
-.builder .ghost *{fill:none;stroke:rgba(0,66,189,.16);stroke-width:1.5;stroke-dasharray:3 5;stroke-linecap:round}
-.builder .ground{stroke:var(--ink-2);stroke-width:1.5;stroke-dasharray:4 6}
-.builder .tag{font:500 11px var(--mono);letter-spacing:.12em;fill:var(--ink-2);opacity:0;transition:opacity .4s var(--ease)}
-.builder .tag.on{opacity:1}
+.builder .stack{position:relative;aspect-ratio:4/3;border-radius:8px;overflow:hidden;background:var(--canvas);isolation:isolate}
+.builder .stack img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(calc(1.06 - .06 * var(--hp,0)));transform-origin:50% 70%}
+.builder .stack img + img{clip-path:inset(calc(var(--c,1) * 100%) 0 0 0)}
+.builder .scan{position:absolute;left:0;right:0;top:calc(var(--sy,1) * 100%);height:2px;background:var(--accent);box-shadow:0 0 14px 2px rgba(242,138,30,.7);opacity:var(--so,0);pointer-events:none}
+.builder .stagename{position:absolute;left:14px;top:14px;margin:0;color:var(--mist);background:rgba(10,26,43,.66);border:1px solid rgba(243,245,247,.25);border-radius:4px;padding:6px 10px;backdrop-filter:blur(6px)}
 .hold{position:relative;margin-top:18px;width:100%;overflow:hidden;background:var(--ink);color:var(--mist);border:0;border-radius:8px;padding:18px 20px;font:700 1rem var(--body);cursor:pointer;user-select:none;-webkit-user-select:none;touch-action:none;display:flex;align-items:center;justify-content:center;gap:12px}
 .hold .bar{position:absolute;inset:0;background:var(--brand);transform-origin:left;transform:scaleX(var(--hp,0))}
 .hold span{position:relative}
@@ -598,21 +592,18 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
           <li class="rv" style="--i:3"><span class="n">04</span><h3>Handover and care</h3><p>We hand over clean and stay reachable.</p></li>
         </ol>
         <div class="builder rv" id="builder" data-rv="right">
-          <div class="meta mono"><span>Drawing B-01</span><span id="stageLabel">Stage 0 of 4</span></div>
-          <svg viewBox="0 0 400 300" aria-hidden="true">
-            <g class="gridbg"><path d="M0 50H400M0 100H400M0 150H400M0 200H400M0 250H400M50 0V300M100 0V300M150 0V300M200 0V300M250 0V300M300 0V300M350 0V300"/></g>
-            <line class="ground" x1="12" y1="268" x2="388" y2="268"/>
-            <g class="st s1"><path pathLength="1" d="M56 268V252H344V268"/><path pathLength="1" d="M70 252V244H110V252M180 252V244H220V252M290 252V244H330V252"/></g>
-            <g class="st s2"><path pathLength="1" d="M90 244V128"/><path pathLength="1" d="M200 244V128"/><path pathLength="1" d="M310 244V128"/></g>
-            <g class="st s3"><path pathLength="1" d="M70 186H330"/><path pathLength="1" d="M70 128H330"/><path pathLength="1" d="M90 186L200 128M200 186L310 128"/></g>
-            <g class="st s4"><path pathLength="1" d="M58 130L200 58L342 130"/><path pathLength="1" d="M120 128L150 99M200 128V58M280 128L250 99M150 99L200 128L250 99"/></g>
-            <text class="tag" id="t1" x="56" y="290">FOOTING</text>
-            <text class="tag" id="t2" x="318" y="236">COLUMNS</text>
-            <text class="tag" id="t3" x="338" y="190">BEAMS</text>
-            <text class="tag" id="t4" x="214" y="52">ROOF</text>
-          </svg>
+          <div class="meta mono"><span>Site B-01</span><span id="stageLabel">Stage 0 of 4</span></div>
+          <div class="stack" id="stack">
+            <img src="assets/img/build/stage-1.jpg" alt="Empty plot behind the Bluebell hoarding" loading="lazy">
+            <img src="assets/img/build/stage-2.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img src="assets/img/build/stage-3.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img src="assets/img/build/stage-4.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img src="assets/img/build/stage-5.jpg" alt="" aria-hidden="true" loading="lazy">
+            <span class="scan" aria-hidden="true"></span>
+            <p class="stagename mono" id="stageName">Empty plot</p>
+          </div>
           <button class="hold" id="hold" type="button"><span class="bar"></span><span id="holdText">Hold to build</span></button>
-          <p class="doneline">That is how every Bluebell job goes up.</p>
+          <p class="doneline">From empty plot to handover. That is how every Bluebell job goes up.</p>
         </div>
       </div>
     </div>
@@ -1043,30 +1034,33 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
 
   // ---------- hold to build ----------
   const builder = $('#builder'), holdBtn = $('#hold'), holdText = $('#holdText'), stageLabel = $('#stageLabel');
-  const stepEls = $$('#steps li'), tags = [1, 2, 3, 4].map(i => $('#t' + i));
+  const stepEls = $$('#steps li'), stack = $('#stack'), layers = $$('#stack img').slice(1), stageName = $('#stageName');
+  const NAMES = ['Empty plot', 'First floors up', 'Frame rising', 'Frame complete', 'Finished and handed over'];
   let hp = 0, holding = false, complete = false, hRaf = null, hLast = 0, lastStage = -1;
-  const bsvg = builder.querySelector('svg'), ghost = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-  ghost.setAttribute('class', 'ghost');
-  $$('.st path', bsvg).forEach(p => { const c = p.cloneNode(); c.removeAttribute('pathLength'); ghost.appendChild(c); });
-  bsvg.insertBefore(ghost, bsvg.querySelector('.st'));
+  const ease = t => t * t * (3 - 2 * t);
   function renderBuild() {
-    const svg = builder.querySelector('svg');
-    for (let i = 0; i < 4; i++) {
-      const s = clamp(hp * 4 - i, 0, 1);
-      svg.style.setProperty('--s' + (i + 1), s.toFixed(3));
-    }
+    let scanY = 1, scanO = 0;
+    layers.forEach((img, i) => {
+      const t = ease(clamp(hp * 4 - i, 0, 1));
+      img.style.setProperty('--c', (1 - t).toFixed(4));
+      if (t > 0 && t < 1) { scanY = 1 - t; scanO = 1; }
+    });
+    stack.style.setProperty('--sy', scanY.toFixed(4));
+    stack.style.setProperty('--so', scanO);
+    stack.style.setProperty('--hp', hp.toFixed(3));
     holdBtn.style.setProperty('--hp', hp.toFixed(3));
     const st = Math.floor(hp * 4 + 0.001);
     if (st !== lastStage) {
       lastStage = st;
       stepEls.forEach((li, i) => li.classList.toggle('lit', i < st));
-      tags.forEach((t, i) => t.classList.toggle('on', i < st));
       stageLabel.textContent = `Stage ${st} of 4`;
     }
+    const nm = NAMES[Math.min(4, Math.round(hp * 4))];
+    if (stageName.textContent !== nm) stageName.textContent = nm;
   }
   function holdLoop(now) {
     const dt = Math.min(100, now - (hLast || now)) / 1000; hLast = now;
-    if (holding) hp = Math.min(1, hp + dt / 2.6);
+    if (holding) hp = Math.min(1, hp + dt / 4.2);
     else hp = Math.max(0, hp - dt * (0.25 + hp * 0.9));
     if (hp >= 1 && !complete) finishBuild();
     renderBuild();
