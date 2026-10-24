@@ -293,6 +293,32 @@ main section:not(.hero){position:relative;padding:clamp(88px,12vw,160px) var(--g
 .lightbox button{background:rgba(255,255,255,.08);border:1px solid var(--line-strong);color:var(--mist);border-radius:6px;min-width:44px;height:44px;cursor:pointer;font:500 1rem var(--body);padding:0 14px;transition:background-color .3s var(--ease)}
 .lightbox button:hover{background:rgba(255,255,255,.16)}
 
+/* clients and associates */
+.clientband{background:var(--canvas-deep);border-top:1px solid var(--line)}
+.clientband .head{margin-bottom:48px}
+.clientband .head h2{font-size:clamp(2.2rem,4.6vw,3.8rem);max-width:18ch}
+.logos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.lg{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:14px;min-height:170px;border-radius:8px;padding:20px 20px 16px;border:1px solid var(--line);overflow:hidden;transition:transform .5s var(--ease),border-color .5s var(--ease)}
+.lg:hover{transform:translateY(-4px);border-color:var(--line-strong)}
+.lg .lgimg{flex:1;display:flex;align-items:center;justify-content:center;min-height:0}
+.lg img{max-width:100%;max-height:96px;width:auto;height:auto;object-fit:contain}
+.lg .mono{font-size:.62rem;line-height:1.5;letter-spacing:.1em}
+.lw{background:#fff;border-color:#fff}.lw .mono{color:#3C4E63}
+.lb{background:#000;border-color:#000}.lb .mono{color:#C9D2DC}
+.ln{background:var(--panel)}
+.ln::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(77,155,240,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(77,155,240,.07) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
+.ln b{position:relative;font:700 clamp(1.4rem,2.1vw,1.9rem)/1.05 var(--display);text-transform:uppercase;color:var(--mist);margin-top:auto}
+.ln .mono{position:relative;color:var(--accent)}
+.ln::after{content:"";position:absolute;left:20px;right:20px;bottom:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.ln:hover::after{transform:scaleX(1)}
+.assoc{margin:34px 0 0;display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 22px;color:var(--steel);font-size:1.05rem}
+.assoc .mono{color:var(--steel-dim)}
+.assoc .list{color:var(--mist);font-weight:500}
+.assoc .list span{white-space:nowrap}
+.assoc i{font-style:normal;color:var(--accent);margin:0 12px}
+@media (max-width:900px){.logos{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.lg{min-height:140px;padding:16px 14px 12px}.lg img{max-height:70px}}
+
 /* why: split */
 .why{background:var(--canvas)}
 .why .split{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,100px);align-items:center}
@@ -629,6 +655,26 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
       <img id="lbImg" src="" alt="">
       <div class="bar"><p id="lbCap"></p><div class="ctrl"><button id="lbPrev" aria-label="Previous photo">&larr;</button><button id="lbNext" aria-label="Next photo">&rarr;</button><button id="lbClose" aria-label="Close">Close</button></div></div>
     </dialog>
+  </section>
+
+  <section class="clientband" id="clients" aria-labelledby="clientsTitle">
+    <div class="wrap">
+      <div class="head rv-group">
+        <p class="label mono rv"><span>Clients and associates</span><svg class="dim" viewBox="0 0 120 12" aria-hidden="true"><path pathLength="1" d="M1 1v10M1 6h118M119 1v10"/></svg></p>
+        <h2 id="clientsTitle" class="rv" style="--i:1">Trusted on rail, road and building work.</h2>
+      </div>
+      <ul class="logos rv-group">
+        <li class="lg lw rv" style="--i:0"><span class="lgimg"><img src="assets/img/clients/ccecc.jpg" alt="CCECC, China Civil Engineering Construction Corporation" loading="lazy" width="560" height="316"></span><span class="mono">Cox’s Bazar-Dohazari Rail Project</span></li>
+        <li class="lg lb rv" style="--i:1"><span class="lgimg"><img src="assets/img/clients/max-group.jpg" alt="MAX Group" loading="lazy" width="560" height="192"></span><span class="mono">Cox’s Bazar-Dohazari Rail Project</span></li>
+        <li class="lg ln rv" style="--i:2"><b>Sinohydro</b><span class="mono">Steel shutter work</span></li>
+        <li class="lg ln rv" style="--i:3"><b>LGED</b><span class="mono">Road work, Manikganj</span></li>
+        <li class="lg ln rv" style="--i:4"><b>Fakir Group</b><span class="mono">Steel structure work</span></li>
+        <li class="lg ln rv" style="--i:5"><b>Sahira Construction</b><span class="mono">Client</span></li>
+        <li class="lg ln rv" style="--i:6"><b>Pick Power &amp; Engineering</b><span class="mono">Client</span></li>
+        <li class="lg ln rv" style="--i:7"><b>D8 Consultant Ltd</b><span class="mono">Client</span></li>
+      </ul>
+      <p class="assoc rv"><span class="mono">Business associates</span><span class="list"><span>Alifa Corporation</span><i aria-hidden="true">/</i><span>A.K Builders</span><i aria-hidden="true">/</i><span>M.M Timbers &amp; Door Complex</span></span></p>
+    </div>
   </section>
 
   <section class="why" id="why">
