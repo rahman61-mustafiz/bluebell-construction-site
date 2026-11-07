@@ -1,0 +1,4 @@
+AddType text/vcard .vcf
+<FilesMatch "\.vcf$">
+  Header set Content-Disposition "attachment; filename=Mossarof-Hosain-Bluebell.vcf"
+</FilesMatch>
