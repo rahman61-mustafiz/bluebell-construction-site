@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bluebell Construction | Contact card</title>
+<meta name="description" content="Contact Bluebell Construction: call, WhatsApp, email or save the contact.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0A2C78">
+<link rel="icon" href="../../assets/logo/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../assets/logo/apple-touch-icon.png">
+<meta property="og:title" content="Bluebell Construction | Contact card">
+<meta property="og:description" content="Building Better Tomorrow. Tap to call, WhatsApp, email or save the contact.">
+<meta property="og:image" content="https://bluebellconstructionltd.com/card/hero-day.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A2C78;--navy-2:#06205C;--blue:#1452C8;--sky:#E9F1FF;--ink:#0B1A3A;--muted:#3C4E70;--green:#25D366;color-scheme:light}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#DCE6F5}
+body{font-family:Poppins,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;background:#DCE6F5}
+a{color:inherit;text-decoration:none}
+.sheet{position:relative;max-width:480px;margin:0 auto;background:linear-gradient(180deg,#fff 0%,var(--sky) 55%,#fff 100%);overflow:hidden;min-height:100vh;box-shadow:0 0 60px rgba(10,44,120,.18)}
+
+/* top */
+.top{position:relative;height:410px;isolation:isolate}
+.photo{position:absolute;right:0;top:118px;width:100%;height:250px;z-index:-1;background:url(../hero-day.jpg) 72% 30%/cover no-repeat;-webkit-mask:linear-gradient(180deg,transparent 0,#000 34%),linear-gradient(100deg,transparent 0%,#000 45%);-webkit-mask-composite:source-in;mask:linear-gradient(180deg,transparent 0,#000 34%) intersect,linear-gradient(100deg,transparent 0%,#000 45%);animation:pan 20s ease-in-out infinite alternate}
+@keyframes pan{to{background-position:60% 40%}}
+.sky{position:absolute;inset:0;z-index:-2;background:radial-gradient(90% 60% at 80% 0%,#CFE2FF 0%,transparent 70%),linear-gradient(180deg,#F4F8FF,#fff)}
+.brand{padding:30px 20px 0}
+.brand img{display:block;width:min(80%,320px);height:auto;filter:drop-shadow(0 2px 10px rgba(255,255,255,.9))}
+.tagline{margin-top:16px;font:italic 700 1.2rem/1.2 Poppins,sans-serif;color:var(--navy);text-shadow:0 1px 8px #fff}
+.swoosh{display:block;width:170px;height:16px;margin:4px 0 0 30px}
+.wave{position:absolute;left:0;right:0;bottom:0;width:100%;height:130px;display:block}
+.skyline{position:absolute;left:20px;bottom:44px;width:84px;height:62px;stroke:#fff;fill:none;stroke-width:1.6;opacity:.95}
+
+/* contact rows */
+.rows{position:relative;padding:4px 14px 0;display:grid;gap:12px;margin-top:-18px}
+.row{display:grid;grid-template-columns:52px 1fr 78px;align-items:center;gap:11px;background:#fff;border-radius:999px;padding:9px 14px 9px 9px;box-shadow:0 8px 22px rgba(10,44,120,.13),0 0 0 1px rgba(10,44,120,.06);transition:transform .15s,box-shadow .2s}
+.row:active{transform:scale(.98)}
+@media (hover:hover){.row:hover{box-shadow:0 12px 28px rgba(10,44,120,.2),0 0 0 1px rgba(20,82,200,.25)}}
+.ic{width:52px;height:52px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#1D4FB8,var(--navy) 70%);display:grid;place-items:center;box-shadow:0 4px 10px rgba(10,44,120,.3)}
+.ic.green{background:radial-gradient(circle at 35% 30%,#4BE07F,#16B04F 75%)}
+.ic svg{width:25px;height:25px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.t{min-width:0}
+.t b{display:block;font-weight:700;font-size:1.12rem;line-height:1.15;color:var(--ink)}
+.t .v{display:block;margin-top:2px;font-weight:500;font-size:1rem;line-height:1.3;color:var(--ink)}
+.row.small .t .v{font-size:clamp(.66rem,3.05vw,.84rem);letter-spacing:-.01em}.nw{white-space:nowrap}
+.cta{align-self:stretch;display:flex;align-items:center;width:78px;padding-left:11px;border-left:1.5px solid var(--navy);font:italic 600 .74rem/1.25 Poppins,sans-serif;color:var(--navy)}
+.save{display:flex;align-items:center;justify-content:center;gap:10px;margin:16px 14px 0;padding:15px;border-radius:999px;background:linear-gradient(180deg,var(--blue),var(--navy));color:#fff;font-weight:600;font-size:1rem;box-shadow:0 10px 24px rgba(10,44,120,.35)}
+.save svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* values */
+.foot{position:relative;margin-top:26px;color:#fff;padding:64px 12px calc(26px + env(safe-area-inset-bottom));background:var(--navy-2);isolation:isolate}
+.foot .wtop{position:absolute;left:0;right:0;top:-1px;width:100%;height:60px;display:block}
+.vals{display:grid;grid-template-columns:repeat(4,1fr)}
+.val{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:0 4px;font-weight:600;font-size:.74rem;line-height:1.25}
+.val + .val{border-left:1px solid rgba(255,255,255,.3)}
+.val svg{width:36px;height:36px;fill:none;stroke:#fff;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.sign{margin-top:22px;display:flex;align-items:center;justify-content:center;gap:12px;font:400 2.3rem/1 "Great Vibes",cursive}
+.sign::before,.sign::after{content:"";flex:1;max-width:60px;height:1px;background:rgba(255,255,255,.55)}
+.legal{margin-top:14px;text-align:center;font-size:.68rem;opacity:.7}
+
+.rv{opacity:0;transform:translateY(14px);animation:in .7s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i,0) * 80ms + 100ms)}
+@keyframes in{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rv{animation:none;opacity:1;transform:none}.photo{animation:none}}
+@media (max-width:360px){.cta{display:none}.row{grid-template-columns:48px 1fr}.ic{width:48px;height:48px}}
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header class="top">
+    <div class="sky"></div>
+    <div class="photo" role="img" aria-label="A Bluebell building under construction"></div>
+    <div class="brand">
+      <img class="rv" style="--i:0" src="../logo-full.png" alt="Bluebell Construction" width="816" height="220">
+      <p class="tagline rv" style="--i:1">Building Better Tomorrow</p>
+      <svg class="swoosh rv" style="--i:2" viewBox="0 0 170 16" aria-hidden="true"><path d="M2 14C50 4 110 1 168 3 110 4 60 8 2 14z" fill="#0A2C78"/></svg>
+    </div>
+    <svg class="wave" viewBox="0 0 480 150" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 40C90 40 150 120 280 110 360 104 420 70 480 64V150H0z" fill="#1452C8" opacity=".9"/>
+      <path d="M0 62C100 62 160 140 290 128 370 121 430 92 480 88V150H0z" fill="#0A2C78"/>
+      <path d="M0 112C120 100 260 150 480 112V150H0z" fill="#E9F1FF"/>
+    </svg>
+    <svg class="skyline" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 22h20M4 22V10h5v12M9 22V4h7v18M16 22v-9h4v9"/><path d="M11.5 8h2M11.5 11h2M11.5 14h2M11.5 17h2M6 13h1M6 16h1M6 19h1M17.5 16h1M17.5 19h1"/></svg>
+  </header>
+
+  <nav class="rows" aria-label="Contact">
+    <a class="row " href="tel:+8801688589592">
+      <span class="ic "><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" fill="#fff" stroke="none"/></svg></span>
+      <span class="t"><b>Call</b><span class="v">+880 1688-589592</span></span>
+      <span class="cta">Talk to Us</span>
+    </a>
+    <a class="row " href="https://wa.me/8801688589592" target="_blank" rel="noopener">
+      <span class="ic green"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.3c0 3.5 3.2 6.7 6.7 6.7l1.3-1.5-2.1-1.1-1 .8a5 5 0 0 1-3.1-3.1l.8-1-1.1-2.1z" fill="#fff" stroke="none"/></svg></span>
+      <span class="t"><b>WhatsApp</b><span class="v">+880 1688-589592</span></span>
+      <span class="cta">Chat with Us</span>
+    </a>
+    <a class="row small" href="mailto:info@bluebellconstructionltd.com">
+      <span class="ic "><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg></span>
+      <span class="t"><b>Email</b><span class="v">info@<wbr>bluebellconstructionltd.com</span></span>
+      <span class="cta">Drop an Email</span>
+    </a>
+    <a class="row small" href="https://bluebellconstructionltd.com">
+      <span class="ic "><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.7 3.8 6 3.8 9.5s-1.2 6.8-3.8 9.5c-2.6-2.7-3.8-6-3.8-9.5S9.4 5.2 12 2.5z"/></svg></span>
+      <span class="t"><b>Website</b><span class="v">bluebellconstructionltd.com</span></span>
+      <span class="cta">Visit Our Website</span>
+    </a>
+    <a class="row small" href="https://www.google.com/maps/search/?api=1&amp;query=157%2F1%2FKa+Distillery+Road+Gendaria+Dhaka+1204" target="_blank" rel="noopener">
+      <span class="ic "><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s-7.5-6.6-7.5-12.6a7.5 7.5 0 0 1 15 0C19.5 15.4 12 22 12 22z" fill="#fff" stroke="none"/><circle cx="12" cy="9.5" r="2.8" fill="#0A2C78" stroke="none"/></svg></span>
+      <span class="t"><b>Address</b><span class="v">157/1/Ka, Distrilary Road,<br>Gendaria, Katherpul, <span class="nw">Dhaka-1204</span></span></span>
+      <span class="cta">Find Us</span>
+    </a>
+  </nav>
+
+  <a class="save" href="contact.vcf" download="Bluebell-Construction.vcf"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M7.5 17.5c.8-2 2.5-3 4.5-3s3.7 1 4.5 3"/></svg>Save Contact</a>
+
+  <footer class="foot">
+    <svg class="wtop" viewBox="0 0 480 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H480V18C380 52 250 6 120 30 70 39 30 40 0 36z" fill="#E9F1FF"/><path d="M0 36C30 40 70 39 120 30 250 6 380 52 480 18V26C380 60 250 14 120 38 70 47 30 48 0 44z" fill="#1452C8"/></svg>
+    <div class="vals">
+      <div class="val"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 11l4-4 4 2 3-2 3 1 6 4"/><path d="M6 7l-4 6 6 6 2-1"/><path d="M22 11l-5 6-3 1"/><path d="M9 13l3 3M11 11l4 4M14 10l3 3"/></svg>Trust &amp; Commitment</div>
+      <div class="val"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8 3v6c0 5-3.4 8.8-8 10-4.6-1.2-8-5-8-10v-6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Quality Construction</div>
+      <div class="val"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11a7 7 0 0 1 14 0"/><path d="M3.5 11h17M12 4v3"/><circle cx="12" cy="14.5" r="3"/><path d="M5.5 22c.8-3 3.4-4.5 6.5-4.5s5.7 1.5 6.5 4.5"/></svg>Professional Team</div>
+      <div class="val"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 22h20M4 22V10h5v12M9 22V4h7v18M16 22v-9h4v9"/><path d="M11.5 8h2M11.5 11h2M11.5 14h2M11.5 17h2M6 13h1M6 16h1M6 19h1M17.5 16h1M17.5 19h1"/></svg>On Time Delivery</div>
+    </div>
+    <p class="sign">Let’s Build Together</p>
+    <p class="legal">&copy; 2026 Bluebell Construction. All rights reserved.</p>
+  </footer>
+</main>
+<script>document.querySelectorAll('.rows .row').forEach((r,i)=>{r.classList.add('rv');r.style.setProperty('--i',i+3)});</script>
+</body>
+</html>
