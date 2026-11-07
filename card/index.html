@@ -30,14 +30,12 @@ a{color:inherit;text-decoration:none}
 .wrap{max-width:480px;margin:0 auto;padding:0 16px calc(28px + env(safe-area-inset-bottom))}
 
 /* hero */
-.hero{position:relative;margin:0 -16px;min-height:430px;padding:44px 20px 70px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;overflow:hidden;isolation:isolate}
+.hero{position:relative;margin:0 -16px;min-height:340px;padding:40px 20px 70px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;overflow:hidden;isolation:isolate}
 .hero::before{content:"";position:absolute;left:0;right:0;top:0;height:150%;z-index:-2;background:url(hero.jpg) center top/cover no-repeat;filter:saturate(.85) brightness(.75);transform:scale(1.06);animation:drift 18s ease-in-out infinite alternate}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,21,48,.82) 0%,rgba(7,21,48,.45) 38%,rgba(7,21,48,.7) 70%,var(--bg) 100%)}
 @keyframes drift{to{transform:scale(1.14) translateY(-10px)}}
-.logo{display:flex;flex-direction:column;align-items:center;gap:14px}
-.mark,.word{display:block;background:linear-gradient(160deg,#fff 0%,#fff 45%,var(--sky) 100%);-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat;filter:drop-shadow(0 8px 24px rgba(0,0,0,.45))}
-.mark{--m:url(logo-mark.png);width:118px;aspect-ratio:290/284}
-.word{--m:url(logo-word.png);width:236px;aspect-ratio:510/150;background:#fff}
+.logo{width:min(100%,330px);background:#fff;border-radius:16px;padding:22px 22px 20px;box-shadow:0 18px 40px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.6) inset}
+.logo img{display:block;width:100%;height:auto}
 .tag{margin-top:18px;display:flex;align-items:center;gap:10px;font:600 .74rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--steel)}
 .tag::before,.tag::after{content:"";width:22px;height:1px;background:var(--steel);opacity:.7}
 .person{margin-top:22px;padding:10px 18px;border:1px solid var(--line-2);border-radius:999px;background:rgba(7,21,48,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
@@ -94,10 +92,7 @@ footer{margin-top:22px;text-align:center;font-size:.76rem;color:var(--steel);opa
 <body>
 <main class="wrap">
   <header class="hero">
-    <div class="logo rv" style="--i:0" role="img" aria-label="Bluebell Construction">
-      <span class="mark"></span>
-      <span class="word"></span>
-    </div>
+    <div class="logo rv" style="--i:0"><img src="logo-full.png" alt="Bluebell Construction" width="816" height="220"></div>
     <p class="tag rv" style="--i:1">Planned first. Built right.</p>
     <p class="person rv" style="--i:2"><b>MD. Mossarof Hosain</b><span>COO</span></p>
   </header>
